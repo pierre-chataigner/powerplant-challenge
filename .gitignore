@@ -1,1 +1,6 @@
 venv/
+notebooks/
+TODO.md
+.*
+!/.gitignore
+
