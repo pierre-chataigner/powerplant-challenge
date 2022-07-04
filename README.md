@@ -42,7 +42,7 @@ curl -L -F "upload_file=@tests/payloads/payload1.json" http://localhost:8888/pro
 
 # Additional information
 
-If you want to run in production, you may want to set ```debug = False``` in the main.py file.
+If you want to run in production, you may want to set ```debug = False``` in the add/main.py file.
 
 
 
