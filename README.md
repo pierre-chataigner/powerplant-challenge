@@ -3,11 +3,22 @@ Powerplant-coding-challenge solution
 
 **Author:** *Pierre Chataigner*
 
+# Structure
+
+## Code
+The folder "app" contains a "main.py" file containing the API generated with uvicorn and the "solver.py" file which compute the solution.
+
+## Tests
+The folder "test" contains several payload.json files. They has been used to test the solution.
+
+
 # Solution
+The solution works with Python 3.8.10 or greater version.
+
 ## Running the API
 Open a terminal. If you have permissions you can use docker.
 ### With docker
-You must have permission to execute those commands.
+You must have permission to execute the following commands.
 ```
 docker build -t powerplant_pierre .
 docker run -ti -p 8888:8888 powerplant_pierre
@@ -26,6 +37,8 @@ Then you start the API with uvicorn :
 ```
 uvicorn app.main:app --host 0.0.0.0 --port 8888
 ```
+Now an API is open on localhost:8888.
+
 ## Send requests
 Open another terminal. 
 You can try it with a post request. For example :

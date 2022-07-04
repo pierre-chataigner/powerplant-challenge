@@ -1,6 +1,5 @@
 venv/
-notebooks/
 TODO.md
 .*
 !/.gitignore
-
+app/__pycache__/
