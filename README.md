@@ -42,7 +42,7 @@ curl -L -F "upload_file=@tests/payloads/payload1.json" http://localhost:8888/pro
 
 # Additional information
 
-If you want to run in production, you may want to set ```debug = False``` in the add/main.py file.
+- If you want to run in production, you may want to set ```debug = False``` in the "app/main.py" file.
 
-
+- The notebook "folder/" has the sole purpose of showing the step for my code to be build, so you can evaluate it if your want. It is not necessary in the execution of the code.
 
