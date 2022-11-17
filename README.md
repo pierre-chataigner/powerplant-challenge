@@ -4,7 +4,7 @@ A solution to
 <a href="https://github.com/gem-spaas/powerplant-coding-challenge">ENGIE powerplant coding challenge</a> 
 
 **Author:** *Pierre Chataigner*
-
+ 
 
 # Structure
 
