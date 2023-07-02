@@ -18,7 +18,7 @@ The folder "test" contains several payload.json files. They has been used to tes
 # Solution
 The solution works with Python 3.8.10 or greater version.
 
-## Running the API
+## Running the API 
 Open a terminal. If you have permissions you can use docker.
 ### With docker
 You must have permission to execute the following commands.
