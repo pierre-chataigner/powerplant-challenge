@@ -6,59 +6,28 @@ A solution to
 **Author:** *Pierre Chataigner*
  
 
-# Structure
-
-## Code
-The folder "app" contains a "main.py" file containing the API generated with uvicorn and the "solver.py" file which compute the solution.
-
-## Tests
-The folder "test" contains several payload.json files. They has been used to test the solution.
-
-
-# Solution
-The solution works with Python 3.8.10 or greater version.
+# Building the environment
+The code works with python 3.9 or greater version. An environment is needed with Flask==2.3.2
+The requirement.txt file can be used to build it with pip or poetry.
 
 ## Running the API 
-Open a terminal. If you have permissions you can use docker.
 ### With docker
-You must have permission to execute the following commands.
+Permission are needed to execute the following commands.
 ```
-docker build -t powerplant_pierre .
-docker run -ti -p 8888:8888 powerplant_pierre
+docker build -t powerplant
+docker run -ti -p 8888:8888 powerplant
 ```
-Now an API is open on localhost:8888.
-
 
 ### Without docker
-First you need to build a python virtual environment :
+Once the environement is build and activated, the API can be started with the following command
 ```
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+flask --app main run -p 8888 --host=0.0.0.0
 ```
-Then you start the API with uvicorn :
-```
-uvicorn app.main:app --host 0.0.0.0 --port 8888
-```
-Now an API is open on localhost:8888.
+Now the API is open on localhost:8888
 
 ## Send requests
-Open another terminal. 
-You can try it with a post request. For example :
+Here's an example of request to test the API :
 ```
-curl -L -F "upload_file=@tests/payloads/payload1.json" http://localhost:8888/productionplan | python -m json.tool 
+curl -H "Content-Type: application/json" --data @path/to/your/payload.json http://localhost:8888/productionplan
 ```
-
-If you want to put the solution in a json file, run :
-```
-curl -L -F "upload_file=@tests/payloads/payload1.json" http://localhost:8888/productionplan | python -m json.tool >> results.json
-```
-
-
-
-# Additional information
-
-- If you want to run in production, you may want to set ```debug = False``` in the "app/main.py" file.
-
-- The notebook "folder/" has the sole purpose of showing the step for my code to be build, so you can evaluate it if your want. It is not necessary in the execution of the code.
 
