@@ -14,7 +14,7 @@ The requirement.txt file can be used to build it with pip or poetry.
 ### With docker
 Permission are needed to execute the following commands.
 ```
-docker build -t powerplant
+docker build -t powerplant .
 docker run -ti -p 8888:8888 powerplant
 ```
 
